@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare+ | Premium Services</title>
+    <link rel="stylesheet" href="css/super.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Service-specific animations */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(58, 134, 255, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(58, 134, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(58, 134, 255, 0); }
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card:hover .service-icon {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            animation: pulse-glow 2s infinite;
+        }
+        
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .service-tab {
+            padding: 0.8rem 2rem;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid var(--light-gray);
+        }
+        
+        .service-tab.active {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 10px 20px rgba(58, 134, 255, 0.2);
+        }
+        
+        .service-category {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .service-category.active {
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="MediCare+">
+            <span>MediCare+</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-text="Home">Home</a></li>
+            <li><a href="index.html#about" data-text="About">About</a></li>
+            <li><a href="doctors.html" data-text="Doctors">Doctors</a></li>
+            <li><a href="#" class="active" data-text="Services">Services</a></li>
+            <li><a href="tests.html" data-text="Tests">Tests</a></li>
+            <li><a href="index.html#contact" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="hero-content">
+            <h1>Cutting-Edge <span class="highlight">Medical Services</span></h1>
+            <p class="subtitle">Comprehensive care with the latest technology and compassionate approach</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/services.jpeg" alt="Hospital Services" class="parallax-img">
+        </div>
+    </section>
+
+    <!-- Services Tabs -->
+    <section class="services-section">
+        <div class="service-tabs">
+            <div class="service-tab active" data-category="all">All Services</div>
+            <div class="service-tab" data-category="diagnostic">Diagnostics</div>
+            <div class="service-tab" data-category="treatment">Treatments</div>
+            <div class="service-tab" data-category="surgical">Surgical</div>
+            <div class="service-tab" data-category="wellness">Wellness</div>
+        </div>
+        
+        <!-- All Services -->
+        <div class="service-category active" id="all">
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Cardiac Care</h3>
+                <p>Comprehensive heart health services including angiograms, ECG, and stress tests.</p>
+                <a href="#" class="btn-tertiary">Learn More</a>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Neurology</h3>
+                <p>Advanced diagnostics and treatment for neurological disorders.</p>
+                <a href="#" class="btn-tertiary">Learn More</a>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-x-ray"></i>
+                </div>
+                <h3>Imaging Center</h3>
+                <p>MRI, CT scans, X-rays, and ultrasound with cutting-edge technology.</p>
+                <a href="#" class="btn-tertiary">Learn More</a>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h3>Orthopedics</h3>
+                <p>Joint replacements, sports medicine, and rehabilitation services.</p>
+                <a href="#" class="btn-tertiary">Learn More</a>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>Pediatrics</h3>
+                <p>Specialized care for infants, children, and adolescents.</p>
+                <a href="#" class="btn-tertiary">Learn More</a>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-lungs"></i>
+                </div>
+                <h3>Pulmonology</h3>
+                <p>Diagnosis and treatment of respiratory system disorders.</p>
+                <a href="#" class="btn-tertiary">Learn More</a>
+            </div>
+        </div>
+        
+        <!-- Diagnostic Services -->
+        <div class="service-category" id="diagnostic">
+            <!-- Similar structure with diagnostic services -->
+        </div>
+        
+        <!-- Treatment Services -->
+        <div class="service-category" id="treatment">
+            <!-- Similar structure with treatment services -->
+        </div>
+        
+        <!-- Surgical Services -->
+        <div class="service-category" id="surgical">
+            <!-- Similar structure with surgical services -->
+        </div>
+        
+        <!-- Wellness Services -->
+        <div class="service-category" id="wellness">
+            <!-- Similar structure with wellness services -->
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-glass">
+            <h2>Ready to prioritize your health?</h2>
+            <p>Schedule a consultation with our specialists today</p>
+            <div class="cta-buttons">
+                <a href="appointment.html" class="btn-primary pulse">Book Appointment</a>
+                <a href="tel:+15551234567" class="btn-secondary">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Floating Button -->
+    <a href="appointment.html" class="floating-appointment-btn pulse">
+        <i class="fas fa-calendar-check"></i>
+        <span>Book Now</span>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Service Tab Functionality
+        const serviceTabs = document.querySelectorAll('.service-tab');
+        const serviceCategories = document.querySelectorAll('.service-category');
+        
+        serviceTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                serviceTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show selected category
+                const category = tab.dataset.category;
+                serviceCategories.forEach(cat => {
+                    cat.classList.remove('active');
+                    if (cat.id === category || category === 'all') {
+                        cat.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

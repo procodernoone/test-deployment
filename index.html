@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare+ | Advanced Healthcare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Glassmorphism Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="MediCare+">
+            <span>MediCare+</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" data-text="Home">Home</a></li>
+            <li><a href="#about" data-text="About">About</a></li>
+            <li><a href="doctors.html" data-text="Doctors">Doctors</a></li>
+            <li><a href="service.html" data-text="Services">Services</a></li>
+            <li><a href="tests.html" data-text="Tests">Tests</a></li>
+            <li><a href="#contact" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animated-text">Your Health <span class="highlight">Our Priority</span></h1>
+            <p class="subtitle">Advanced medical care with cutting-edge technology and compassionate specialists</p>
+            <div class="cta-buttons">
+                <a href="appointment.html" class="btn-primary pulse">Book Appointment</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero.jpg" alt="Hospital" class="parallax-img">
+        </div>
+    </section>
+
+    <!-- Modern Timetable Section -->
+    <section class="timetable-section">
+        <h2>Opening Hours</h2>
+        <div class="timetable-container">
+            <div class="timetable-glass">
+                <div class="timetable-header">
+                    <h3>Department Hours</h3>
+                    <div class="time-indicator">
+                        <span class="live-dot"></span>
+                        <span id="current-time">Now: 10:30 AM</span>
+                    </div>
+                </div>
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Weekdays</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>General Medicine</td>
+                            <td>8:00 AM - 8:00 PM</td>
+                            <td>9:00 AM - 5:00 PM</td>
+                            <td>Emergency Only</td>
+                        </tr>
+                        <tr>
+                            <td>Cardiology</td>
+                            <td>9:00 AM - 6:00 PM</td>
+                            <td>9:00 AM - 2:00 PM</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Neurology</td>
+                            <td>10:00 AM - 7:00 PM</td>
+                            <td>10:00 AM - 3:00 PM</td>
+                            <td>Emergency Only</td>
+                        </tr>
+                        <tr>
+                            <td>Pediatrics</td>
+                            <td>8:00 AM - 6:00 PM</td>
+                            <td>9:00 AM - 4:00 PM</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Emergency</td>
+                            <td colspan="3">24/7 Open</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="timetable-footer">
+                    <p>* Emergency services available 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Animated Cards -->
+    <section id="about" class="about-section">
+        <h2>About MediCare+</h2>
+        <p class="section-description">Premium healthcare with world-class facilities and expert professionals</p>
+        
+        <div class="about-cards">
+            <a href="doctors.html" class="about-card hover-3d">
+                <div class="card-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Our Doctors</h3>
+                <p>Meet our team of specialized physicians and surgeons</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+            
+            <a href="service.html" class="about-card hover-3d">
+                <div class="card-icon">
+                    <i class="fas fa-procedures"></i>
+                </div>
+                <h3>Services</h3>
+                <p>Explore our comprehensive medical services</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+            
+            <a href="tests.html" class="about-card hover-3d">
+                <div class="card-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Tests</h3>
+                <p>Advanced diagnostic tests and screenings</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonial Section with Animated Carousel -->
+    <section class="testimonial-section">
+        <h2>Patient Experiences</h2>
+        <p class="section-description">What our patients say about us</p>
+        
+        <div class="testimonial-carousel">
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <div class="quote-icon">"</div>
+                    <p>The care I received at MediCare+ was exceptional. The doctors took time to listen and explain everything clearly.</p>
+                    <div class="patient-info">
+                        <div class="patient-image">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J.">
+                        </div>
+                        <div class="patient-details">
+                            <h4>Sarah Johnson</h4>
+                            <span>Cardiac Patient</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="quote-icon">"</div>
+                    <p>From the moment I walked in, I felt cared for. The staff is professional yet warm and friendly.</p>
+                    <div class="patient-info">
+                        <div class="patient-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+                        </div>
+                        <div class="patient-details">
+                            <h4>Michael Thompson</h4>
+                            <span>Orthopedic Patient</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="quote-icon">"</div>
+                    <p>The pediatric department is amazing with kids. My daughter actually looks forward to her check-ups!</p>
+                    <div class="patient-info">
+                        <div class="patient-image">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K.">
+                        </div>
+                        <div class="patient-details">
+                            <h4>Priya Kapoor</h4>
+                            <span>Parent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                <div class="indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <script src="js/main.js"></script>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions or need to schedule an appointment? Reach out to us.</p>
+                
+                <div class="info-cards">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>123 Medical Drive, Health City, HC 12345</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>info@medicareplus.com</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" action="https://formsubmit.co/promotherofshwapno1234@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="index.html">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.jpeg" alt="MediCare+">
+                <h3>MediCare+</h3>
+                <p>Advanced Healthcare Solutions</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="tests.html">Tests</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-services">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Emergency Care</a></li>
+                    <li><a href="#">Cardiology</a></li>
+                    <li><a href="#">Neurology</a></li>
+                    <li><a href="#">Pediatrics</a></li>
+                    <li><a href="#">Diagnostics</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for health tips and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 MediCare+. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Appointment Floating Button -->
+    <a href="appointment.html" class="floating-appointment-btn pulse">
+        <i class="fas fa-calendar-check"></i>
+        <span>Book Now</span>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

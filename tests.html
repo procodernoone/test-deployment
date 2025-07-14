@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare+ | Advanced Diagnostics</title>
+    <link rel="stylesheet" href="css/super.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Test-specific styles */
+        .test-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-card:hover .test-image img {
+            transform: scale(1.1);
+        }
+        
+        .test-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .test-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .test-details {
+            padding: 1.5rem;
+        }
+        
+        .test-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .test-price {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .test-duration {
+            color: var(--gray);
+        }
+        
+        .test-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        
+        .test-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+        
+        .test-search {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+        
+        .test-search input {
+            width: 100%;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            padding-left: 3rem;
+        }
+        
+        .test-search i {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="MediCare+">
+            <span>MediCare+</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-text="Home">Home</a></li>
+            <li><a href="index.html#about" data-text="About">About</a></li>
+            <li><a href="doctors.html" data-text="Doctors">Doctors</a></li>
+            <li><a href="service.html" data-text="Services">Services</a></li>
+            <li><a href="#" class="active" data-text="Tests">Tests</a></li>
+            <li><a href="index.html#contact" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Tests Hero -->
+    <section class="tests-hero">
+        <div class="hero-content">
+            <h1>Advanced <span class="highlight">Diagnostic Tests</span></h1>
+            <p class="subtitle">Precision diagnostics for accurate treatment planning</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/tests.jpeg" alt="Diagnostic Tests" class="parallax-img">
+        </div>
+    </section>
+
+    <!-- Tests Section -->
+    <section class="tests-section">
+        <div class="test-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search tests by name or specialty...">
+        </div>
+        
+        <div class="tests-grid">
+            <!-- Test 1 -->
+            <div class="test-card" data-aos="fade-up">
+                <div class="test-badge">Most Popular</div>
+                <div class="test-image">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="MRI Scan">
+                </div>
+                <div class="test-details">
+                    <h3>MRI Scan</h3>
+                    <p>Detailed images of organs and structures inside your body using magnetic fields.</p>
+                    <div class="test-meta">
+                        <span class="test-price">$450</span>
+                        <span class="test-duration">45-60 mins</span>
+                    </div>
+                    <div class="test-actions">
+                        <a href="#" class="text-link">View Details</a>
+                        <a href="appointment.html" class="btn-tertiary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Test 2 -->
+            <div class="test-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="test-image">
+                    <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="CT Scan">
+                </div>
+                <div class="test-details">
+                    <h3>CT Scan</h3>
+                    <p>Combination of X-rays and computer technology to produce detailed images.</p>
+                    <div class="test-meta">
+                        <span class="test-price">$320</span>
+                        <span class="test-duration">30 mins</span>
+                    </div>
+                    <div class="test-actions">
+                        <a href="#" class="text-link">View Details</a>
+                        <a href="appointment.html" class="btn-tertiary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Test 3 -->
+            <div class="test-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="test-image">
+                    <img src="https://images.unsplash.com/photo-1579165466741-6d2f1a3520ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Blood Test">
+                </div>
+                <div class="test-details">
+                    <h3>Comprehensive Blood Panel</h3>
+                    <p>Measures various components and features of your blood.</p>
+                    <div class="test-meta">
+                        <span class="test-price">$120</span>
+                        <span class="test-duration">15 mins</span>
+                    </div>
+                    <div class="test-actions">
+                        <a href="#" class="text-link">View Details</a>
+                        <a href="appointment.html" class="btn-tertiary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Test 4 -->
+            <div class="test-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="test-badge">New</div>
+                <div class="test-image">
+                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Echocardiogram">
+                </div>
+                <div class="test-details">
+                    <h3>Echocardiogram</h3>
+                    <p>Ultrasound of the heart to assess heart structure and function.</p>
+                    <div class="test-meta">
+                        <span class="test-price">$280</span>
+                        <span class="test-duration">45 mins</span>
+                    </div>
+                    <div class="test-actions">
+                        <a href="#" class="text-link">View Details</a>
+                        <a href="appointment.html" class="btn-tertiary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Test 5 -->
+            <div class="test-card" data-aos="fade-up">
+                <div class="test-image">
+                    <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Colonoscopy">
+                </div>
+                <div class="test-details">
+                    <h3>Colonoscopy</h3>
+                    <p>Examination of the large intestine and rectum for abnormalities.</p>
+                    <div class="test-meta">
+                        <span class="test-price">$850</span>
+                        <span class="test-duration">1-2 hours</span>
+                    </div>
+                    <div class="test-actions">
+                        <a href="#" class="text-link">View Details</a>
+                        <a href="appointment.html" class="btn-tertiary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Test 6 -->
+            <div class="test-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="test-image">
+                    <img src="https://images.unsplash.com/photo-1584824486539-53bb4646bdbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mammogram">
+                </div>
+                <div class="test-details">
+                    <h3>Mammogram</h3>
+                    <p>X-ray of the breast used to detect and diagnose breast diseases.</p>
+                    <div class="test-meta">
+                        <span class="test-price">$210</span>
+                        <span class="test-duration">20 mins</span>
+                    </div>
+                    <div class="test-actions">
+                        <a href="#" class="text-link">View Details</a>
+                        <a href="appointment.html" class="btn-tertiary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How should I prepare for my test?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Preparation depends on the specific test. For most blood tests, fasting for 8-12 hours is required. For imaging tests, you may need to avoid certain foods or medications. Detailed instructions will be provided when you book your appointment.</p>
+                </div>
+            </div>
+            
+            <!-- More FAQ items -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Floating Button -->
+    <a href="appointment.html" class="floating-appointment-btn pulse">
+        <i class="fas fa-calendar-check"></i>
+        <span>Book Now</span>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Test Search Functionality
+        const testSearch = document.querySelector('.test-search input');
+        const testCards = document.querySelectorAll('.test-card');
+        
+        testSearch.addEventListener('input', () => {
+            const searchTerm = testSearch.value.toLowerCase();
+            
+            testCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-answer').style.maxHeight = null;
+                        faq.querySelector('i').classList.remove('fa-chevron-up');
+                        faq.querySelector('i').classList.add('fa-chevron-down');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    answer.style.maxHeight = null;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

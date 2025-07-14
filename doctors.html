@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare+ | Dream Team</title>
+    <link rel="stylesheet" href="css/super.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Doctor-specific animations */
+        @keyframes stethoscope {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .doctor-card:hover .doc-icon {
+            animation: stethoscope 1s infinite;
+        }
+        
+        .specialty-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: linear-gradient(45deg, #ff006e, #8338ec);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(131, 56, 236, 0.3);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="MediCare+">
+            <span>MediCare+</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-text="Home">Home</a></li>
+            <li><a href="index.html#about" data-text="About">About</a></li>
+            <li><a href="#" class="active" data-text="Doctors">Doctors</a></li>
+            <li><a href="service.html" data-text="Services">Services</a></li>
+            <li><a href="tests.html" data-text="Tests">Tests</a></li>
+            <li><a href="index.html#contact" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Doctor Grid Section -->
+    <section class="doctors-section">
+        <div class="section-header">
+            <h1>Our <span class="highlight">Medical Dream Team</span></h1>
+            <p class="section-description">Board-certified specialists dedicated to your health journey</p>
+        </div>
+        
+        <div class="doctor-filters">
+            <button class="filter-btn active" data-filter="all">All Specialties</button>
+            <button class="filter-btn" data-filter="cardiology">Cardiology</button>
+            <button class="filter-btn" data-filter="neurology">Neurology</button>
+            <button class="filter-btn" data-filter="pediatrics">Pediatrics</button>
+            <button class="filter-btn" data-filter="surgery">Surgery</button>
+        </div>
+        
+        <div class="doctors-grid">
+            <!-- Doctor 1 -->
+            <div class="doctor-card" data-specialty="cardiology" data-aos="fade-up">
+                <div class="doc-image">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Chen">
+                    <div class="specialty-badge">❤️ Cardiology</div>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Dr. Michael Chen</h3>
+                    <p class="doc-specialty">Cardiologist</p>
+                    <p class="doc-bio">Harvard-trained with 15+ years experience in interventional cardiology.</p>
+                    <div class="doc-meta">
+                        <span><i class="fas fa-award"></i> 24 Awards</span>
+                        <span><i class="fas fa-procedures"></i> 12 Specializations</span>
+                    </div>
+                    <a href="appointment.html" class="btn-tertiary">
+                        <span>Consult</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Doctor 2 -->
+            <div class="doctor-card" data-specialty="neurology" data-aos="fade-up" data-aos-delay="100">
+                <div class="doc-image">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Dr. Sarah Johnson">
+                    <div class="specialty-badge">🧠 Neurology</div>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p class="doc-specialty">Neurologist</p>
+                    <p class="doc-bio">Pioneer in minimally invasive neurosurgical techniques.</p>
+                    <div class="doc-meta">
+                        <span><i class="fas fa-award"></i> 18 Awards</span>
+                        <span><i class="fas fa-procedures"></i> 9 Specializations</span>
+                    </div>
+                    <a href="appointment.html" class="btn-tertiary">
+                        <span>Consult</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Doctor 3 -->
+            <div class="doctor-card" data-specialty="pediatrics" data-aos="fade-up" data-aos-delay="200">
+                <div class="doc-image">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Priya Kapoor">
+                    <div class="specialty-badge">👶 Pediatrics</div>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Dr. Priya Kapoor</h3>
+                    <p class="doc-specialty">Pediatrician</p>
+                    <p class="doc-bio">Specializes in childhood developmental disorders and nutrition.</p>
+                    <div class="doc-meta">
+                        <span><i class="fas fa-award"></i> 9 Awards</span>
+                        <span><i class="fas fa-procedures"></i> 5 Specializations</span>
+                    </div>
+                    <a href="appointment.html" class="btn-tertiary">
+                        <span>Consult</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Doctor 4 -->
+            <div class="doctor-card" data-specialty="surgery" data-aos="fade-up" data-aos-delay="300">
+                <div class="doc-image">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Robert Langdon">
+                    <div class="specialty-badge">🔪 Surgery</div>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-icon">
+                        <i class="fas fa-scalpel"></i>
+                    </div>
+                    <h3>Dr. Robert Langdon</h3>
+                    <p class="doc-specialty">General Surgeon</p>
+                    <p class="doc-bio">Expert in laparoscopic and robotic-assisted surgeries.</p>
+                    <div class="doc-meta">
+                        <span><i class="fas fa-award"></i> 14 Awards</span>
+                        <span><i class="fas fa-procedures"></i> 7 Specializations</span>
+                    </div>
+                    <a href="appointment.html" class="btn-tertiary">
+                        <span>Consult</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Doctor 5 -->
+            <div class="doctor-card" data-specialty="cardiology" data-aos="fade-up">
+                <div class="doc-image">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Dr. Emily Wong">
+                    <div class="specialty-badge">❤️ Cardiology</div>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Dr. Emily Wong</h3>
+                    <p class="doc-specialty">Cardiac Electrophysiologist</p>
+                    <p class="doc-bio">Specializes in heart rhythm disorders and ablation therapies.</p>
+                    <div class="doc-meta">
+                        <span><i class="fas fa-award"></i> 11 Awards</span>
+                        <span><i class="fas fa-procedures"></i> 6 Specializations</span>
+                    </div>
+                    <a href="appointment.html" class="btn-tertiary">
+                        <span>Consult</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Doctor 6 -->
+            <div class="doctor-card" data-specialty="neurology" data-aos="fade-up" data-aos-delay="100">
+                <div class="doc-image">
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Dr. David Park">
+                    <div class="specialty-badge">🧠 Neurology</div>
+                </div>
+                <div class="doc-info">
+                    <div class="doc-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Dr. David Park</h3>
+                    <p class="doc-specialty">Neurosurgeon</p>
+                    <p class="doc-bio">Expert in complex spinal surgeries and brain tumor removal.</p>
+                    <div class="doc-meta">
+                        <span><i class="fas fa-award"></i> 22 Awards</span>
+                        <span><i class="fas fa-procedures"></i> 8 Specializations</span>
+                    </div>
+                    <a href="appointment.html" class="btn-tertiary">
+                        <span>Consult</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="counter" data-target="42">0</h3>
+                    <p>Specialists</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-procedures"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="counter" data-target="156">0</h3>
+                    <p>Procedures</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="counter" data-target="9821">0</h3>
+                    <p>Happy Patients</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="counter" data-target="127">0</h3>
+                    <p>Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Floating Button -->
+    <a href="appointment.html" class="floating-appointment-btn pulse">
+        <i class="fas fa-calendar-check"></i>
+        <span>Book Now</span>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Doctor Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const doctorCards = document.querySelectorAll('.doctor-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                // Filter doctors
+                doctorCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.specialty === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Animate counter numbers
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Start animation when stats section is in view
+        const statsSection = document.querySelector('.stats-section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.unobserve(statsSection);
+            }
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
+    </script>
+</body>
+</html>
